@@ -11,7 +11,7 @@ namespace MoodAnalyserProblem
     /// </summary>
     public class MoodAnalyser
     {
-        string message;
+        public string message;
         public MoodAnalyser()
         {
 
