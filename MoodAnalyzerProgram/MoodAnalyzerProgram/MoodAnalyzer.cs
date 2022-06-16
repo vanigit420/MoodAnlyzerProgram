@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MoodAnalyserProblem
 {
     /// <summary>
-    ///Handling Exception
+    /// refactoring MoodAnalyser with parameterized constructure
     /// </summary>
     public class MoodAnalyser
     {
