@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 
 namespace MoodAnalyserProblem
 {
-    /// <summary>
-    ///Handling Exception
-    /// </summary>
     public class MoodAnalyser
     {
         string message;
@@ -16,30 +13,15 @@ namespace MoodAnalyserProblem
         {
             this.message = message;
         }
+        //method to Analyse mood 
         public string AnalyseMood()
         {
-            try
+            message = message.ToLower();
+            if (message.Contains("sad"))
             {
-                message = message.ToLower();
-                if (message.Equals(string.Empty))
-                {
-                    throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.EMPTY_EXCEPTION, "Mood should not be empty");
-
-                }
-                if (message.Equals(null))
-                {
-                    throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.NULL_EXCEPTION, "Mood should not be null");
-                }
-                if (message.Contains("sad"))
-                {
-                    return "sad";
-                }
-                else
-                {
-                    return "happy";
-                }
+                return "sad";
             }
-            catch (NullReferenceException e)
+            else
             {
                 return "happy";
             }
